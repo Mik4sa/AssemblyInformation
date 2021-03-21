@@ -21,7 +21,7 @@ The assembly (and it's references) you are viewing don't get blocked by this too
 ## How to use
 - Download and unpack a release
 - Then add an entry to your context menu (for _.exe_ and _.dll_ extension) by running _[Add Shell Extension.ps1](AssemblyInformation.Launcher/Add%20Shell%20Extension.ps1)_
-- Right an assembly and click _AssemblyInformation_
+- Right click an assembly and select _AssemblyInformation_
 
 Alternatively you can drag and drop an assembly onto _AssemblyInformation.Launcher.exe_ directly.
 
