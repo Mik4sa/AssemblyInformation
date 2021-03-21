@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net5.0-windows</TargetFramework>
+		<Platforms>x64</Platforms>
+		<EnableNETAnalyzers>true</EnableNETAnalyzers>
+		<AnalysisMode>AllEnabledByDefault</AnalysisMode>
+		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+		<ApplicationIcon>..\AssemblyInformation.Launcher\Icon.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<DebugType>none</DebugType>
+		<DebugSymbols>false</DebugSymbols>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\AssemblyInformation\AssemblyInformation.csproj" />
+	</ItemGroup>
+
+</Project>

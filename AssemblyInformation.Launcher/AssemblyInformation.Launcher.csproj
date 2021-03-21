@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net5.0-windows</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<EnableNETAnalyzers>true</EnableNETAnalyzers>
+		<AnalysisMode>AllEnabledByDefault</AnalysisMode>
+		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+		<ApplicationIcon>Icon.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DebugType>none</DebugType>
+		<DebugSymbols>false</DebugSymbols>
+		<NoWarn>1701;1702;MSB3270</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<NoWarn>1701;1702;MSB3270</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\AssemblyInformation.x64\AssemblyInformation.x64.csproj" />
+		<ProjectReference Include="..\AssemblyInformation.x86\AssemblyInformation.x86.csproj" />
+		<ProjectReference Include="..\AssemblyInformation\AssemblyInformation.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Add Shell Extension.ps1">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Icon.ico">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Remove Shell Extension.ps1">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+</Project>
