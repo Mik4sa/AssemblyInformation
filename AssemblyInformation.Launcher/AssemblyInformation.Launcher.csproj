@@ -30,7 +30,7 @@
 	  <None Update="Add Shell Extension.ps1">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="Icon.ico">
+	  <None Update="AssemblyInformation.ico">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
 	  <None Update="Remove Shell Extension.ps1">
