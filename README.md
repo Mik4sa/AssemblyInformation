@@ -28,6 +28,6 @@ Alternatively you can drag and drop an assembly onto _AssemblyInformation.Launch
 To remove the shell extension again run _[Remove Shell Extension.ps1](AssemblyInformation.Launcher/Remove%20Shell%20Extension.ps1)_.
 
 ## Screenshots
-![Screenshot 1](Screenshots_01.png)
+![Screenshot 1](Screenshot_01.png)
 
-![Screenshot 2](Screenshots_02.png)
+![Screenshot 2](Screenshot_02.png)
