@@ -7,7 +7,7 @@
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>
 		<AnalysisMode>AllEnabledByDefault</AnalysisMode>
 		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-		<ApplicationIcon>..\AssemblyInformation.Launcher\Icon.ico</ApplicationIcon>
+		<ApplicationIcon>..\AssemblyInformation.Launcher\AssemblyInformation.ico</ApplicationIcon>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
