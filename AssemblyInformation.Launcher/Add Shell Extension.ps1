@@ -1,7 +1,8 @@
-$key = Get-ItemPropertyValue "HKCU:\SOFTWARE\Classes\.dll" "(Default)"
-[Microsoft.Win32.Registry]::SetValue('HKEY_CURRENT_USER\SOFTWARE\Classes\' + $key + '\shell\AssemblyInformation\command', '', '"' + $PSScriptRoot + '\AssemblyInformation.Launcher.exe" "%1"')
-[Microsoft.Win32.Registry]::SetValue('HKEY_CURRENT_USER\SOFTWARE\Classes\' + $key + '\shell\AssemblyInformation', 'icon', '"' + $PSScriptRoot + '\Icon.ico"')
+function Add-ShellExtension($fileExtension) {
+	$key = Get-ItemPropertyValue "Registry::HKCR\.$fileExtension" "(default)"
+	New-Item -Path "Registry::HKCU\SOFTWARE\Classes\$key\shell\AssemblyInformation\command" -Value """$PSScriptRoot\AssemblyInformation.Launcher.exe"" ""%1""" -Force
+	New-ItemProperty -Path "Registry::HKCU\SOFTWARE\Classes\$key\shell\AssemblyInformation" -Name "icon" -Value """$PSScriptRoot\Icon.ico""" -Force
+}
 
-$key = Get-ItemPropertyValue "HKCU:\SOFTWARE\Classes\.exe" "(Default)"
-[Microsoft.Win32.Registry]::SetValue('HKEY_CURRENT_USER\SOFTWARE\Classes\' + $key + '\shell\AssemblyInformation\command', '', '"' + $PSScriptRoot + '\AssemblyInformation.Launcher.exe" "%1"')
-[Microsoft.Win32.Registry]::SetValue('HKEY_CURRENT_USER\SOFTWARE\Classes\' + $key + '\shell\AssemblyInformation', 'icon', '"' + $PSScriptRoot + '\Icon.ico"')
+Add-ShellExtension("dll")
+Add-ShellExtension("exe")
